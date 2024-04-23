@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body{
+    background-color: hsl(210, 46%, 95%);
+    scroll-behavior:smooth;
+    
+}
+
+.container{
+    max-width:900px;
+    margin:0 auto;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    /* justify-content: center; */
+    font-family: "Barlow Semi Condensed", sans-serif; 
+  font-style: normal;
+}
+
+.grid-section{ 
+    display:grid;
+    gap:20px;
+    grid-template-areas: "first first first  second five"
+                         "third four four four  five";
+}
+
+
+
+.card1{
+    grid-area:first;
+    background-color:hsl(263, 55%, 52%);
+    color:white;
+    border-radius:8px;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card2{
+    grid-area:second;
+    background-color:hsl(217, 19%, 35%) ;
+    color:white;
+    border-radius:8px;
+}
+
+.card3{
+    grid-area:third;
+    background-color:hsl(0, 0%, 100%) ;
+    color:black;
+    border-radius:8px;
+}
+
+.card4{
+    grid-area:four;
+    background-color: hsl(219, 29%, 14%);
+    color:white;
+    border-radius:8px;
+}
+
+.card5{
+    grid-area:five;
+    background-color:hsl(0, 0%, 100%) ;
+    color:black;
+    border-radius:8px;
+}
+
+.card-header{
+    display:flex;
+    align-items:center;
+    column-gap:20px;
+}
+
+.card-header img{
+    border-radius:50%;
+    border:1px solid white;
+    width:30px;
+}
+
+.card3 .content .name h5{
+    color:black;
+}
+
+.card5 .content .name h5{
+    color:black;
+}
+
+.content .name h5{
+    font-weight:500;
+    color:hsl(0, 0%, 81%);
+}
+
+.content .status p{
+font-size:11px;
+color:hsla(0, 0%, 81%, 0.5);
+}
+
+.card3 .content .status p{
+    color:rgba(0, 0, 0, 0.5);
+} 
+
+.card3 .card-paragraph p{
+    color:rgba(0, 0, 0, 0.7);
+}
+
+.card5 .content .status p{
+    color:rgba(0, 0, 0, 0.5);
+} 
+
+.card5 .card-paragraph p{
+    color:rgba(0, 0, 0, 0.7);
+}
+
+
+.card-main-content{
+    margin:10px 0;
+    
+}
+
+.card-main-content h4{
+    font-weight:500;
+}
+
+.card-paragraph p{
+    font-size:11px;
+    color:hsla(0, 0%, 81%, 0.7);
+}
+
+@media only screen and (max-width:375px){
+
+    .container{
+margin:50px  30px;
+
+    }
+    .grid-section{ 
+        grid-template-areas: "first"
+                             "second"
+                             "third"
+                             "four"
+                             "five";
+    }
+}
+
+@media only screen and (min-width:375px)  and (max-width:500px){
+
+    .container{
+margin:70px  30px;
+
+    }
+    .grid-section{ 
+        grid-template-areas: "first"
+                             "second"
+                             "third"
+                             "four"
+                             "five";
+    }
+}
+
+@media only screen and (min-width:500px)  and (max-width:660px){
+
+    .container{
+margin:50px 30px;
+
+    }
+    .grid-section{ 
+        grid-template-areas: "first first "
+        "second third"
+                             " four four"
+                             " five five"
+                             
+                             ;
+    }
+}
+
+
+
+@media only screen and (min-width:660px)  and (max-width:900px){
+
+    .container{
+margin:0 30px;
+
+    }
+    .grid-section{ 
+        grid-template-areas: "first first first second"
+                             "third four four four"
+                             "five five five five"
+                             
+                             ;
+    }
+}
+
+@media only screen and (min-width:900px)  and (max-width:1000px){
+
+    .container{
+margin:0 30px;
+    }
+    
+
+}
